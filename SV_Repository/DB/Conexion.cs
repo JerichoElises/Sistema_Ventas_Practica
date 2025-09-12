@@ -16,7 +16,7 @@ namespace SV_Repository.DB
             _cadenaSql = _configuration.GetConnectionString("CadenaSql")!;
         }
 
-        public SqlConnection Obtener()
+        public SqlConnection ObtenerSQLConexion()
         {
             return new SqlConnection("_cadenaSql");
         }

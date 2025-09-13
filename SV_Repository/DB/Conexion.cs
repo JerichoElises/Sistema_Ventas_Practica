@@ -1,6 +1,4 @@
-﻿
-
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
 namespace SV_Repository.DB
@@ -18,7 +16,8 @@ namespace SV_Repository.DB
 
         public SqlConnection ObtenerSQLConexion()
         {
-            return new SqlConnection("_cadenaSql");
+            return new SqlConnection(_cadenaSql);
         }
     }
 }
+

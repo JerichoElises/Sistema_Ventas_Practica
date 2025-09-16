@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using SV_Repository;
 using SV_Repository.Implementation;
 using SV_Repository.Intefaces;
+using SVPresentation.Formularios;
 using SVServices;
 using SVServices.Implementation;
 using SVServices.Interfaces;
@@ -23,7 +24,7 @@ namespace SVPresentation
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             var host = CreateHostBuilder().Build();
-            var formService = host.Services.GetRequiredService<Form1>();
+            var formService = host.Services.GetRequiredService<FrmCategoria>();
 
 
             Application.Run(formService);
@@ -39,7 +40,7 @@ namespace SVPresentation
 
                 services.RegisterServicesDepencies();
 
-                services.AddTransient<Form1>();
+                services.AddTransient<FrmCategoria>();
                 
             });
 

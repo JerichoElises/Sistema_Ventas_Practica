@@ -32,8 +32,8 @@
             tabLista = new TabPage();
             dgvCategorias = new DataGridView();
             btnBuscar = new Button();
-            textBox1 = new TextBox();
-            btnNuevo = new Button();
+            txbBuscar = new TextBox();
+            btnNuevoLista = new Button();
             tabNuevo = new TabPage();
             btnGuardarNuevo = new Button();
             btnVolverNuevo = new Button();
@@ -75,8 +75,8 @@
             // 
             tabLista.Controls.Add(dgvCategorias);
             tabLista.Controls.Add(btnBuscar);
-            tabLista.Controls.Add(textBox1);
-            tabLista.Controls.Add(btnNuevo);
+            tabLista.Controls.Add(txbBuscar);
+            tabLista.Controls.Add(btnNuevoLista);
             tabLista.Location = new Point(4, 24);
             tabLista.Name = "tabLista";
             tabLista.Padding = new Padding(3);
@@ -92,6 +92,7 @@
             dgvCategorias.Name = "dgvCategorias";
             dgvCategorias.Size = new Size(699, 264);
             dgvCategorias.TabIndex = 7;
+            dgvCategorias.CellContentClick += dgvCategorias_CellContentClick;
             // 
             // btnBuscar
             // 
@@ -103,24 +104,26 @@
             btnBuscar.TabIndex = 6;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
-            // textBox1
+            // txbBuscar
             // 
-            textBox1.Location = new Point(456, 12);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(174, 23);
-            textBox1.TabIndex = 5;
+            txbBuscar.Location = new Point(456, 12);
+            txbBuscar.Name = "txbBuscar";
+            txbBuscar.Size = new Size(174, 23);
+            txbBuscar.TabIndex = 5;
             // 
-            // btnNuevo
+            // btnNuevoLista
             // 
-            btnNuevo.Cursor = Cursors.Hand;
-            btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Location = new Point(17, 12);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(75, 23);
-            btnNuevo.TabIndex = 4;
-            btnNuevo.Text = "Nuevo";
-            btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevoLista.Cursor = Cursors.Hand;
+            btnNuevoLista.FlatStyle = FlatStyle.Flat;
+            btnNuevoLista.Location = new Point(17, 12);
+            btnNuevoLista.Name = "btnNuevoLista";
+            btnNuevoLista.Size = new Size(75, 23);
+            btnNuevoLista.TabIndex = 4;
+            btnNuevoLista.Text = "Nuevo";
+            btnNuevoLista.UseVisualStyleBackColor = true;
+            btnNuevoLista.Click += btnNuevoLista_Click;
             // 
             // tabNuevo
             // 
@@ -149,6 +152,7 @@
             btnGuardarNuevo.TabIndex = 6;
             btnGuardarNuevo.Text = "Guardar";
             btnGuardarNuevo.UseVisualStyleBackColor = true;
+            btnGuardarNuevo.Click += btnGuardarNuevo_Click;
             // 
             // btnVolverNuevo
             // 
@@ -160,6 +164,7 @@
             btnVolverNuevo.TabIndex = 5;
             btnVolverNuevo.Text = "Volver";
             btnVolverNuevo.UseVisualStyleBackColor = true;
+            btnVolverNuevo.Click += btnVolverNuevo_Click;
             // 
             // cbbMedidaNuevo
             // 
@@ -244,6 +249,7 @@
             btnGuardarEditar.TabIndex = 12;
             btnGuardarEditar.Text = "Guardar";
             btnGuardarEditar.UseVisualStyleBackColor = true;
+            btnGuardarEditar.Click += btnGuardarEditar_Click;
             // 
             // btnVolverEditar
             // 
@@ -255,6 +261,7 @@
             btnVolverEditar.TabIndex = 11;
             btnVolverEditar.Text = "Volver";
             btnVolverEditar.UseVisualStyleBackColor = true;
+            btnVolverEditar.Click += btnVolverEditar_Click;
             // 
             // cbbMedidaEditar
             // 
@@ -333,8 +340,8 @@
         private TabPage tabEditar;
         private DataGridView dgvCategorias;
         private Button btnBuscar;
-        private TextBox textBox1;
-        private Button btnNuevo;
+        private TextBox txbBuscar;
+        private Button btnNuevoLista;
         private Label label2;
         private TextBox txbNombreNuevo;
         private Button btnGuardarNuevo;

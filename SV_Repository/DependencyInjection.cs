@@ -14,6 +14,7 @@ namespace SV_Repository
 
             services.AddTransient<IMedidaRepository, MedidaRepository>();
             services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+            services.AddTransient<IProductoRepository, ProductoRepository>();
         }
     }
 }

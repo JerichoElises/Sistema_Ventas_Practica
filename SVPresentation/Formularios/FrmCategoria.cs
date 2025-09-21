@@ -78,6 +78,7 @@ namespace SVPresentation.Formularios
 
             cbbMedidaNuevo.InsertarItems(items);
             cbbMedidaEditar.InsertarItems(items);
+
             cbbHabilitado.InsertarItems(itemsHabilitado);
 
 

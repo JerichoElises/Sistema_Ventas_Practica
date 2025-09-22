@@ -36,8 +36,24 @@
             cbbCategoriaNuevo = new ComboBox();
             label3 = new Label();
             tabEditar = new TabPage();
+            cbbHabilitado = new ComboBox();
+            label14 = new Label();
+            label4 = new Label();
+            txbCantidadEditar = new NumericUpDown();
+            txbPrecioVentaEditar = new TextBox();
+            label5 = new Label();
+            txbPrecioCompraEditar = new TextBox();
+            label6 = new Label();
+            txbDescripcionEditar = new TextBox();
+            label11 = new Label();
+            cbbCategoriaEditar = new ComboBox();
+            label12 = new Label();
+            txbCodigoEditar = new TextBox();
+            label13 = new Label();
             txbCodigoNuevo = new TextBox();
             tabNuevo = new TabPage();
+            label10 = new Label();
+            txbCantidadNuevo = new NumericUpDown();
             txbPrecioVentaNuevo = new TextBox();
             label9 = new Label();
             txbPrecioCompraNuevo = new TextBox();
@@ -51,29 +67,13 @@
             btnNuevoLista = new Button();
             tabLista = new TabPage();
             tabControlMain = new TabControl();
-            txbCantidadNuevo = new NumericUpDown();
-            label10 = new Label();
-            label4 = new Label();
-            txbCantidadEditar = new NumericUpDown();
-            txbPrecioVentaEditar = new TextBox();
-            label5 = new Label();
-            txbPrecioCompra = new TextBox();
-            label6 = new Label();
-            txbDescripcionEditar = new TextBox();
-            label11 = new Label();
-            cbbCategoriaEditar = new ComboBox();
-            label12 = new Label();
-            txbCodigoEditar = new TextBox();
-            label13 = new Label();
-            cbbHabilitado = new ComboBox();
-            label14 = new Label();
             tabEditar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txbCantidadEditar).BeginInit();
             tabNuevo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txbCantidadNuevo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             tabLista.SuspendLayout();
             tabControlMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)txbCantidadNuevo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)txbCantidadEditar).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -97,6 +97,7 @@
             btnGuardarEditar.TabIndex = 12;
             btnGuardarEditar.Text = "Guardar";
             btnGuardarEditar.UseVisualStyleBackColor = false;
+            btnGuardarEditar.Click += btnGuardarEditar_Click;
             // 
             // btnVolverEditar
             // 
@@ -109,6 +110,7 @@
             btnVolverEditar.TabIndex = 11;
             btnVolverEditar.Text = "Volver";
             btnVolverEditar.UseVisualStyleBackColor = false;
+            btnVolverEditar.Click += btnVolverEditar_Click;
             // 
             // btnGuardarNuevo
             // 
@@ -122,6 +124,7 @@
             btnGuardarNuevo.TabIndex = 6;
             btnGuardarNuevo.Text = "Guardar";
             btnGuardarNuevo.UseVisualStyleBackColor = false;
+            btnGuardarNuevo.Click += btnGuardarNuevo_Click;
             // 
             // btnVolverNuevo
             // 
@@ -134,6 +137,7 @@
             btnVolverNuevo.TabIndex = 5;
             btnVolverNuevo.Text = "Volver";
             btnVolverNuevo.UseVisualStyleBackColor = false;
+            btnVolverNuevo.Click += btnVolverNuevo_Click;
             // 
             // cbbCategoriaNuevo
             // 
@@ -162,7 +166,7 @@
             tabEditar.Controls.Add(txbCantidadEditar);
             tabEditar.Controls.Add(txbPrecioVentaEditar);
             tabEditar.Controls.Add(label5);
-            tabEditar.Controls.Add(txbPrecioCompra);
+            tabEditar.Controls.Add(txbPrecioCompraEditar);
             tabEditar.Controls.Add(label6);
             tabEditar.Controls.Add(txbDescripcionEditar);
             tabEditar.Controls.Add(label11);
@@ -179,6 +183,124 @@
             tabEditar.TabIndex = 2;
             tabEditar.Text = "Editar";
             tabEditar.UseVisualStyleBackColor = true;
+            // 
+            // cbbHabilitado
+            // 
+            cbbHabilitado.Cursor = Cursors.Hand;
+            cbbHabilitado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbHabilitado.FormattingEnabled = true;
+            cbbHabilitado.Location = new Point(404, 85);
+            cbbHabilitado.Name = "cbbHabilitado";
+            cbbHabilitado.Size = new Size(309, 23);
+            cbbHabilitado.TabIndex = 28;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(404, 67);
+            label14.Name = "label14";
+            label14.Size = new Size(65, 15);
+            label14.TabIndex = 27;
+            label14.Text = "Habilitado:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(404, 15);
+            label4.Name = "label4";
+            label4.Size = new Size(58, 15);
+            label4.TabIndex = 26;
+            label4.Text = "Cantidad:";
+            // 
+            // txbCantidadEditar
+            // 
+            txbCantidadEditar.Location = new Point(404, 34);
+            txbCantidadEditar.Name = "txbCantidadEditar";
+            txbCantidadEditar.Size = new Size(309, 23);
+            txbCantidadEditar.TabIndex = 25;
+            // 
+            // txbPrecioVentaEditar
+            // 
+            txbPrecioVentaEditar.Location = new Point(19, 240);
+            txbPrecioVentaEditar.Name = "txbPrecioVentaEditar";
+            txbPrecioVentaEditar.Size = new Size(328, 23);
+            txbPrecioVentaEditar.TabIndex = 24;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(22, 222);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 15);
+            label5.TabIndex = 23;
+            label5.Text = "Precio Venta:";
+            // 
+            // txbPrecioCompraEditar
+            // 
+            txbPrecioCompraEditar.Location = new Point(19, 187);
+            txbPrecioCompraEditar.Name = "txbPrecioCompraEditar";
+            txbPrecioCompraEditar.Size = new Size(328, 23);
+            txbPrecioCompraEditar.TabIndex = 22;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(19, 169);
+            label6.Name = "label6";
+            label6.Size = new Size(89, 15);
+            label6.TabIndex = 21;
+            label6.Text = "Precio Compra:";
+            // 
+            // txbDescripcionEditar
+            // 
+            txbDescripcionEditar.Location = new Point(19, 136);
+            txbDescripcionEditar.Name = "txbDescripcionEditar";
+            txbDescripcionEditar.Size = new Size(328, 23);
+            txbDescripcionEditar.TabIndex = 20;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(22, 118);
+            label11.Name = "label11";
+            label11.Size = new Size(72, 15);
+            label11.TabIndex = 19;
+            label11.Text = "Descripción:";
+            // 
+            // cbbCategoriaEditar
+            // 
+            cbbCategoriaEditar.Cursor = Cursors.Hand;
+            cbbCategoriaEditar.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbbCategoriaEditar.FormattingEnabled = true;
+            cbbCategoriaEditar.Location = new Point(19, 34);
+            cbbCategoriaEditar.Name = "cbbCategoriaEditar";
+            cbbCategoriaEditar.Size = new Size(328, 23);
+            cbbCategoriaEditar.TabIndex = 18;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(19, 15);
+            label12.Name = "label12";
+            label12.Size = new Size(61, 15);
+            label12.TabIndex = 17;
+            label12.Text = "Categoría:";
+            // 
+            // txbCodigoEditar
+            // 
+            txbCodigoEditar.Location = new Point(19, 85);
+            txbCodigoEditar.Name = "txbCodigoEditar";
+            txbCodigoEditar.Size = new Size(328, 23);
+            txbCodigoEditar.TabIndex = 16;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(19, 67);
+            label13.Name = "label13";
+            label13.Size = new Size(49, 15);
+            label13.TabIndex = 15;
+            label13.Text = "Código:";
             // 
             // txbCodigoNuevo
             // 
@@ -210,6 +332,22 @@
             tabNuevo.TabIndex = 1;
             tabNuevo.Text = "Nuevo";
             tabNuevo.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(403, 14);
+            label10.Name = "label10";
+            label10.Size = new Size(58, 15);
+            label10.TabIndex = 14;
+            label10.Text = "Cantidad:";
+            // 
+            // txbCantidadNuevo
+            // 
+            txbCantidadNuevo.Location = new Point(403, 33);
+            txbCantidadNuevo.Name = "txbCantidadNuevo";
+            txbCantidadNuevo.Size = new Size(309, 23);
+            txbCantidadNuevo.TabIndex = 13;
             // 
             // txbPrecioVentaNuevo
             // 
@@ -275,6 +413,7 @@
             dgvProductos.Name = "dgvProductos";
             dgvProductos.Size = new Size(699, 264);
             dgvProductos.TabIndex = 7;
+            dgvProductos.CellContentClick += dgvProductos_CellContentClick;
             // 
             // btnBuscar
             // 
@@ -287,6 +426,7 @@
             btnBuscar.TabIndex = 6;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // txbBuscar
             // 
@@ -306,6 +446,7 @@
             btnNuevoLista.TabIndex = 4;
             btnNuevoLista.Text = "Nuevo";
             btnNuevoLista.UseVisualStyleBackColor = false;
+            btnNuevoLista.Click += btnNuevoLista_Click;
             // 
             // tabLista
             // 
@@ -334,140 +475,6 @@
             tabControlMain.SizeMode = TabSizeMode.Fixed;
             tabControlMain.TabIndex = 2;
             // 
-            // txbCantidadNuevo
-            // 
-            txbCantidadNuevo.Location = new Point(403, 33);
-            txbCantidadNuevo.Name = "txbCantidadNuevo";
-            txbCantidadNuevo.Size = new Size(309, 23);
-            txbCantidadNuevo.TabIndex = 13;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(403, 14);
-            label10.Name = "label10";
-            label10.Size = new Size(58, 15);
-            label10.TabIndex = 14;
-            label10.Text = "Cantidad:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(404, 15);
-            label4.Name = "label4";
-            label4.Size = new Size(58, 15);
-            label4.TabIndex = 26;
-            label4.Text = "Cantidad:";
-            // 
-            // txbCantidadEditar
-            // 
-            txbCantidadEditar.Location = new Point(404, 34);
-            txbCantidadEditar.Name = "txbCantidadEditar";
-            txbCantidadEditar.Size = new Size(309, 23);
-            txbCantidadEditar.TabIndex = 25;
-            // 
-            // txbPrecioVentaEditar
-            // 
-            txbPrecioVentaEditar.Location = new Point(19, 240);
-            txbPrecioVentaEditar.Name = "txbPrecioVentaEditar";
-            txbPrecioVentaEditar.Size = new Size(328, 23);
-            txbPrecioVentaEditar.TabIndex = 24;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(22, 222);
-            label5.Name = "label5";
-            label5.Size = new Size(75, 15);
-            label5.TabIndex = 23;
-            label5.Text = "Precio Venta:";
-            // 
-            // txbPrecioCompra
-            // 
-            txbPrecioCompra.Location = new Point(19, 187);
-            txbPrecioCompra.Name = "txbPrecioCompra";
-            txbPrecioCompra.Size = new Size(328, 23);
-            txbPrecioCompra.TabIndex = 22;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(19, 169);
-            label6.Name = "label6";
-            label6.Size = new Size(89, 15);
-            label6.TabIndex = 21;
-            label6.Text = "Precio Compra:";
-            // 
-            // txbDescripcionEditar
-            // 
-            txbDescripcionEditar.Location = new Point(19, 136);
-            txbDescripcionEditar.Name = "txbDescripcionEditar";
-            txbDescripcionEditar.Size = new Size(328, 23);
-            txbDescripcionEditar.TabIndex = 20;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(22, 118);
-            label11.Name = "label11";
-            label11.Size = new Size(72, 15);
-            label11.TabIndex = 19;
-            label11.Text = "Descripción:";
-            // 
-            // cbbCategoriaEditar
-            // 
-            cbbCategoriaEditar.Cursor = Cursors.Hand;
-            cbbCategoriaEditar.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbCategoriaEditar.FormattingEnabled = true;
-            cbbCategoriaEditar.Location = new Point(19, 34);
-            cbbCategoriaEditar.Name = "cbbCategoriaEditar";
-            cbbCategoriaEditar.Size = new Size(328, 23);
-            cbbCategoriaEditar.TabIndex = 18;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(19, 15);
-            label12.Name = "label12";
-            label12.Size = new Size(61, 15);
-            label12.TabIndex = 17;
-            label12.Text = "Categoría:";
-            // 
-            // txbCodigoEditar
-            // 
-            txbCodigoEditar.Location = new Point(19, 85);
-            txbCodigoEditar.Name = "txbCodigoEditar";
-            txbCodigoEditar.Size = new Size(328, 23);
-            txbCodigoEditar.TabIndex = 16;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(19, 67);
-            label13.Name = "label13";
-            label13.Size = new Size(49, 15);
-            label13.TabIndex = 15;
-            label13.Text = "Código:";
-            // 
-            // cbbHabilitado
-            // 
-            cbbHabilitado.Cursor = Cursors.Hand;
-            cbbHabilitado.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbbHabilitado.FormattingEnabled = true;
-            cbbHabilitado.Location = new Point(404, 85);
-            cbbHabilitado.Name = "cbbHabilitado";
-            cbbHabilitado.Size = new Size(309, 23);
-            cbbHabilitado.TabIndex = 28;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(404, 67);
-            label14.Name = "label14";
-            label14.Size = new Size(65, 15);
-            label14.TabIndex = 27;
-            label14.Text = "Habilitado:";
-            // 
             // frmProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -482,14 +489,14 @@
             Load += frmProducto_Load;
             tabEditar.ResumeLayout(false);
             tabEditar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)txbCantidadEditar).EndInit();
             tabNuevo.ResumeLayout(false);
             tabNuevo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)txbCantidadNuevo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             tabLista.ResumeLayout(false);
             tabLista.PerformLayout();
             tabControlMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)txbCantidadNuevo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)txbCantidadEditar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -527,7 +534,7 @@
         private NumericUpDown txbCantidadEditar;
         private TextBox txbPrecioVentaEditar;
         private Label label5;
-        private TextBox txbPrecioCompra;
+        private TextBox txbPrecioCompraEditar;
         private Label label6;
         private TextBox txbDescripcionEditar;
         private Label label11;

@@ -1,0 +1,31 @@
+﻿
+using SV_Repository.Entities;
+using SV_Repository.Intefaces;
+using SVServices.Interfaces;
+
+namespace SVServices.Implementation
+{
+    public class UsuarioService : IUsuarioService
+    {
+        private readonly IUsuarioRepository _usuarioRepository;
+        public UsuarioService(IUsuarioRepository usuarioRepository)
+        {
+            _usuarioRepository = usuarioRepository;
+        }
+        public async Task<List<Usuario>> Lista(string buscar = "")
+        {
+           return await _usuarioRepository.Lista(buscar);
+        }
+        public async Task<string> Crear(Usuario Objeto)
+        {
+          return await  _usuarioRepository.Crear(Objeto);
+        }
+
+        public async Task<string> Editar(Usuario Objeto)
+        {
+          return await _usuarioRepository.Editar(Objeto);
+        }
+
+        
+    }
+}

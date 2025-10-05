@@ -110,7 +110,7 @@ namespace SVPresentation.Formularios
             MostrarTab(tabLista.Name);
         }
 
-        private async Task btnGuardarNuevo_Click(object sender, EventArgs e)
+        private async void btnGuardarNuevo_Click(object sender, EventArgs e)
         {
             if (txbNombreCompletoNuevo.Text.Trim() == "")
             {

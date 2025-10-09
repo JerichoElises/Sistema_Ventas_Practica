@@ -35,7 +35,7 @@ namespace SVPresentation.Formularios
             _negocio = await _negocioService.obtener();
 
             txbRazonSocial.Text = _negocio.RazonSocial;
-            txbRuc.Text = _negocio.Ruc;
+            txbRuc.Text = _negocio.RUC;
             txbDIreccion.Text = _negocio.Direccion;
             txbCelular.Text = _negocio.Celular;
             txbCorreo.Text = _negocio.Correo;
@@ -91,7 +91,7 @@ namespace SVPresentation.Formularios
             }
 
             objeto.RazonSocial = txbRazonSocial.Text;
-            objeto.Ruc = txbRuc.Text;
+            objeto.RUC = txbRuc.Text;
             objeto.Direccion = txbDIreccion.Text;
             objeto.Celular = txbCelular.Text;
             objeto.Correo = txbCorreo.Text;

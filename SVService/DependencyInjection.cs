@@ -19,6 +19,7 @@ namespace SVServices
             services.AddTransient<IRolService, RolService>();
             services.AddTransient<IUsuarioService, UsuarioService>();
             services.AddTransient<ICorreoService, CorreoService>();
+            services.AddTransient<IVentaService, VentaService>();
         }
     }
 }

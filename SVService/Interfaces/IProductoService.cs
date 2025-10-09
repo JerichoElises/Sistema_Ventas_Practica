@@ -9,5 +9,6 @@ namespace SVServices.Interfaces
         Task<List<Producto>> Lista(string buscar = "");
         Task<string> Crear(Producto Objeto);
         Task<string> Editar(Producto Objeto);
+        Task<Producto> Obtener(string codigo);
     }
 }

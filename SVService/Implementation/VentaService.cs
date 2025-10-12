@@ -27,6 +27,14 @@ namespace SVServices.Implementation
            return await _ventaRepository.ObtenerDetalle(numeroVenta);
         }
 
-        
+        public async Task<List<Venta>> Lista(string fechaInicio, string fechaFin, string buscar = "")
+        {
+            return await _ventaRepository.Lista(fechaInicio, fechaFin, buscar);  
+        }
+
+        public async Task<List<DetalleVenta>> Reporte(string fechaInicio, string fechaFin)
+        {
+            return await _ventaRepository.Reporte(fechaInicio, fechaFin);
+        }
     }
 }

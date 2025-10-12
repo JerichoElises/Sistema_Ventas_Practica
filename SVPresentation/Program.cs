@@ -1,4 +1,4 @@
-using Microsoft.Extensions.Configuration;
+ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SV_Repository;
@@ -24,7 +24,7 @@ namespace SVPresentation
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             var host = CreateHostBuilder().Build();
-            var formService = host.Services.GetRequiredService<frmVenta>();
+            var formService = host.Services.GetRequiredService<frmReporteVenta>();
 
 
             Application.Run(formService);
@@ -46,6 +46,10 @@ namespace SVPresentation
                 services.AddTransient<frmUsuario>();
                 services.AddTransient<frmVenta>();
                 services.AddTransient<frmBuscarProductos>();
+                services.AddTransient<frmHistorial>();
+                services.AddTransient<frmDetalleVenta1>();
+                services.AddTransient<frmReporteVenta>();
+
                 
             });
 

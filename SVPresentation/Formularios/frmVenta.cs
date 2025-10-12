@@ -113,6 +113,9 @@ namespace SVPresentation.Formularios
                 _detalleVenta[index] = encontrado;
             }
 
+
+
+
             decimal Total = _detalleVenta.Sum(x => x.Total);
 
             lblTotal.Text = Total.ToString("0.00");

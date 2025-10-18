@@ -175,9 +175,8 @@ namespace SVPresentation.Formularios
             var cambio = txbCambio.Text.Trim() == "" ? 0 : Convert.ToDecimal(txbCambio.Text.Trim());
 
 
-            //TODO: ingresar el id del usuario logeado
             XElement venta = new XElement("Venta",
-                new XElement("IdUsuarioRegistro", 1),
+                new XElement("IdUsuarioRegistro", UsuarioSesion.IdUsuario),
                 new XElement("NombreCliente", txbNombreCliente.Text.Trim()),
                 new XElement("PrecioTotal", precioTotal),
                 new XElement("PagoCon", pagoCon),

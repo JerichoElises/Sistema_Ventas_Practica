@@ -24,7 +24,7 @@ namespace SVPresentation
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             var host = CreateHostBuilder().Build();
-            var formService = host.Services.GetRequiredService<frmReporteVenta>();
+            var formService = host.Services.GetRequiredService<frmLogin>();
 
 
             Application.Run(formService);
@@ -49,6 +49,8 @@ namespace SVPresentation
                 services.AddTransient<frmHistorial>();
                 services.AddTransient<frmDetalleVenta1>();
                 services.AddTransient<frmReporteVenta>();
+                services.AddTransient<frmLogin>();
+                services.AddTransient<frmActualizarClave>();
 
                 
             });

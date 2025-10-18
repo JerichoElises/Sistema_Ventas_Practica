@@ -9,5 +9,9 @@ namespace SV_Repository.Intefaces
         Task<List<Usuario>> Lista(string buscar = "");
         Task<string> Crear(Usuario Objeto);
         Task<string> Editar(Usuario Objeto);
+        Task<Usuario> Login(string usuario, string clave);
+        Task<int>VerificarCorreo(string correo);
+        Task ActualizarClave(int idUsuario, string nuevaClave, int resetear);
+
     }
 }

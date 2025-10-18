@@ -17,7 +17,7 @@ namespace SVPresentation.Utilidades
             string guid = Guid.NewGuid().ToString("N").Substring(0, 6);
             return guid;
         }
-        public static string CovertToSha256(string texto)
+        public static string ConvertToSha256(string texto)
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {

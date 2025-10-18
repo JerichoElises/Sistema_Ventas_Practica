@@ -26,6 +26,19 @@ namespace SVServices.Implementation
           return await _usuarioRepository.Editar(Objeto);
         }
 
-        
+        public async Task<Usuario> Login(string usuario, string clave)
+        {
+           return await _usuarioRepository.Login(usuario, clave);   
+        }
+
+        public async Task<int> VerificarCorreo(string correo)
+        {
+            return await _usuarioRepository.VerificarCorreo(correo);  
+        }
+
+        public async Task ActualizarClave(int idUsuario, string nuevaClave, int resetear)
+        {
+            await _usuarioRepository.ActualizarClave(idUsuario, nuevaClave, resetear); 
+        }
     }
 }

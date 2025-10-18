@@ -129,7 +129,7 @@ namespace SVPresentation.Formularios
             }
 
             var claveGenerada = Util.GenerateCode();
-            var claveSha256 = Util.CovertToSha256(claveGenerada);
+            var claveSha256 = Util.ConvertToSha256(claveGenerada);
 
             var objeto = new Usuario
             {
